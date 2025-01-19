@@ -32,9 +32,8 @@ RUN echo "log_errors = On" >> /usr/local/etc/php/php.ini \
 
 # Install necessary packages for PostgreSQL
 RUN apk --no-cache add postgresql-dev \
-php83-pdo_pgsql \
-php83-pgsql \
-php83-pdo && docker-php-ext-install pdo_pgsql pgsql
+    php83-pdo_pgsql \
+    && docker-php-ext-install pdo_pgsql && docker-php-ext-enable pdo_pgsql
 
 # Ensure the project directory is owned by the web server user
 RUN chown -R www-data:www-data /app
