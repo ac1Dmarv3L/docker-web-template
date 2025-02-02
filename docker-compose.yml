@@ -23,6 +23,8 @@ services:
     volumes:
       # Bind the project directory to the container
       - ./project:/app
+      # Exclude Composer's vendor directory for performance boosting
+      - /app/vendor
       # Map PHP logs to the host system for debugging
       - ./logs/php:/var/log/php
     # Environment variable for application configuration
@@ -35,8 +37,8 @@ services:
     # Attach to the custom network
     networks:
       - project-network
-    # Run Composer and start PHP-FPM
-    command: sh -c "composer install && php-fpm"
+    # Start PHP-FPM
+    command: sh -c "php-fpm"
 
   # Nginx service configuration
   nginx:
