@@ -37,7 +37,7 @@ services:
     # Attach to the custom network
     networks:
       - project-network
-    # Start PHP-FPM
+    # Update Composer dependencies and start PHP-FPM
     command: sh -c "composer update && php-fpm"
 
   # Nginx service configuration
