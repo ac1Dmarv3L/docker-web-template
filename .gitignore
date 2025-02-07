@@ -2,7 +2,7 @@
 .idea/
 
 # Ignore .env file
-.env
+#.env
 
 # Ignore all Composer dependencies
 project/vendor/
