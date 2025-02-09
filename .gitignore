@@ -11,6 +11,10 @@ project/vendor/
 data/postgres/*
 !data/postgres/.gitkeep
 
+# Ignore pgAdmin files
+data/pgadmin/*
+!data/pgadmin/.gitkeep
+
 # Ignore log files but keep directories
 logs/nginx/*
 !logs/nginx/.gitkeep

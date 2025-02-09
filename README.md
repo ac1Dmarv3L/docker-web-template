@@ -2,7 +2,7 @@
 
 ---
 
-This repository provides a lightweight and flexible Docker template for local PHP web development with Nginx as the web server and PostgreSQL as the database. It's tailored for developers who value simplicity and performance while adhering to modern containerization best practices.
+This repository provides a lightweight and flexible Docker template for local PHP web development with Nginx as the web server, PostgreSQL as the database and pgAdmin for database managing. It's tailored for developers who value simplicity and performance while adhering to modern containerization best practices.
 
 Features:
 
@@ -16,6 +16,7 @@ What's Included?
 - PHP-FPM 8.3
 - Nginx 1.27.3
 - PostgreSQL 17
+- pgAdmin 8
 - Dockerfiles: Custom configurations for PHP-FPM, Nginx and PostgreSQL (all are Alpine-based).
 - nginx.conf: Pre-configured for PHP applications, with gzip compression and security rules.
 - .gitignore: Ensures proper exclusion of sensitive or unnecessary files, including dependencies and logs.
@@ -26,7 +27,7 @@ How to use:
 
 1. Clone the repository to your machine: `git clone git@github.com:ac1Dmarv3L/docker-web-template.git`
 2. Go to the directory: `cd docker-web-template`
-3. Rename .env.example to .env and adjust it to your configuration
+3. Adjust `.env` file to your configuration. Use `.env.example` as a reference.
 4. Build images and start containers: `docker compose up --build -d`
 
 ---
