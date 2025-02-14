@@ -3,6 +3,7 @@
 
 # Ignore .env file
 #.env
+.env.local.bak
 
 # Ignore all Composer dependencies
 project/vendor/
